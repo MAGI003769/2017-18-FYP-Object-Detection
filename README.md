@@ -2,7 +2,7 @@
 
 My undergraduate final year project, supervised by [Dr. Qiufeng Wang](http://www.xjtlu.edu.cn/zh/departments/academic-departments/electrical-and-electronic-engineering/staff/qiufeng-wang), which intends to implement object detection in images using SSD method. This repository, whose `README.md` is a record of learning outcome and experiment observation, contains the paper, implementation code and relevant data. 
 
-The detail theory refers to the [arXiv paper](https://arxiv.org/abs/1512.02325). Initially, I read and understand the methodology in paper with a [keras version](https://github.com/rykov8/ssd_keras) implementation. Considering about current stage that I still a tyro in this field, it is most likely to make modifications on such a version based on user-friendly interface. For better performance, it may be better to refer a [tensorflow version](https://github.com/balancap/SSD-Tensorflow) with more advanced features. With the study goes further, more methodologies and techniques come into view. 
+The detail theory refers to the [paper](https://arxiv.org/abs/1512.02325). Initially, I read and understand the methodology in paper with a [keras version](https://github.com/rykov8/ssd_keras) implementation. Considering about current stage that I still a tyro in this field, it is most likely to make modifications on such a version based on user-friendly interface. For better performance, it may be better to refer a [tensorflow version](https://github.com/balancap/SSD-Tensorflow) with more advanced features. With the study goes further, more methodologies and techniques come into view. 
 
 # Comprehension of Methodology
 
@@ -14,6 +14,7 @@ Most methodologies used for object detection has a network to **_extract feature
 
 - VGG
 - [ResNet](Papers and Notes/Residual Learning.md)
+- [MobileNet](https://arxiv.org/pdf/1704.04861.pdf)
 
 ## Region Related
 
@@ -29,52 +30,75 @@ This project employs **_Bounding Boxes_** to show the results of object detectio
 
 Even though, as previously mentioned, this project mainly study and implement SSD for object detection. It is improper to ignore the methodologies which perform well in this task. Following list collects some remarkable methodologies.
 
-- SSD
+- **SSD**
+- **YOLO (YOLO9000)**
 - Faster R-CNN
-- YOLO (YOLO9000)
 - R-FCN (Fully-Convolutional Network)
 - SSPNet (Spatial pyramid pooling)
 - Mask R-CNN (This is optional one as it is for advanced segmentation)
+- Light-head RCNN
 
 # Record of Study, Experiment and Observation
 
-## 2017/9/27
+**2017/9/27**
 
 - Add more testing images. The accuracy is, although not bad, lower than expected. Particularly, some objects are ignored as their low confidence. There is, as well, some wrong classification (eg. treat horse as cow).
 - ~~There was no dropout for current trained network. Thus, it is conjectured as the reason for not sufficiently good result.~~  After further study, I think the dropout regularization exists when training the network.
 
-## 2017/10/7
+**2017/10/7**
 
 - Study of SSD architecture: Based Network
 - Learning TensorFlow frame work
 
-## 2017/10/17
+**2017/10/17**
 
 - Review of CNN to help understanding
 - Review some basic of Deep Learning
 
-##2017/10/31
+**2017/10/31**
 
 - Learning of Keras interface
 - Code reading and understanding about paper
 
-## 2017/11/8
+**2017/11/8**
 
 - Study of training methods and loss function of SSD
 - _**Question**: Confusions on number of bbox selection_
 
-## 2017/11/15
+**2017/11/15**
 
 - Study of **_Deep Residual Learning_** which is a very deep architecture but easy to train. 
 - This is study to explore the possibility of change the recognition network (or base network) for a higher confidence score or better performance on small objects.
 
-## 2017/11/21
+**2017/11/21**
 
 - More details on training methodology. 
 - _**Question**: The classifier for each feature map is just a convolutional layer and then flattened layer without fully-connection. So, is it not necessary for a classifier to have FC?_ [The function of FC](https://stats.stackexchange.com/questions/182102/what-do-the-fully-connected-layers-do-in-cnns)
 - About different scale feature map: It is initially confusing to make the b-boxes of different feature layers  correctly plotted on the images. But, through the reading of code, I observed that the shape of those layers are possibly the same. Pooling layers???
 
+**2017/11/26**
+
+- **_Question:_** Regression detail of bounding box position
+
+**2017/12/2**
+
+- **_Question:_**  [Batch Normalization Layer ](https://kratzert.github.io/2016/02/12/understanding-the-gradient-flow-through-the-batch-normalization-layer.html) (which occurs while reading other paper) 
+
+**2017/12/6**
+
+- Poster presentation session
+- Summarize works so far
+- Consider more on possible modification...
+
+
+
 # Web Source for Reference
 
 - [Zhihu - Why is SSD weak in small object detection?](https://www.zhihu.com/question/49455386)
 - [Zhihu - What improvements does SSD method have?](https://www.zhihu.com/question/50910763)
+- [Zhihu-SSD](https://zhuanlan.zhihu.com/p/24954433)
+- [Zhihu-What does SSD train?](https://zhuanlan.zhihu.com/p/29410169)
+- [Paper-Reading: SSD](http://blog.csdn.net/u010167269/article/details/52563573)
+- [YOLO Project](https://pjreddie.com/darknet/yolo/)
+- [RoI Pooling Explanation](https://blog.deepsense.ai/region-of-interest-pooling-explained/)
+- [List of Datasets](https://en.wikipedia.org/wiki/List_of_datasets_for_machine_learning_research)
