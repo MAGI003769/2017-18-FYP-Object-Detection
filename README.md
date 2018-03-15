@@ -15,6 +15,8 @@ Most methodologies used for object detection has a network to **_extract feature
 - VGG
 - [ResNet](Papers and Notes/Residual Learning.md)
 - [MobileNet](https://arxiv.org/pdf/1704.04861.pdf)
+- [MobileNet V2](https://arxiv.org/pdf/1801.04381.pdf)
+- Xception
 
 ## Region Related
 
@@ -23,20 +25,32 @@ This project employs **_Bounding Boxes_** to show the results of object detectio
 - Region of Interest (RoI)
 
 
-- Region Proposal Network (in Faster R-CNN)
-- Anchor
+- Region Proposal Network (RPN)
+- **Anchor**
 
 ## Integrated Detection Methodologies
 
 Even though, as previously mentioned, this project mainly study and implement SSD for object detection. It is improper to ignore the methodologies which perform well in this task. Following list collects some remarkable methodologies.
 
-- **SSD**
-- **YOLO (YOLO9000)**
+- **[SSD](https://arxiv.org/abs/1512.02325) / SSDLite (mentioned in MobileNet V2 paper)**
+- YOLO (YOLO9000)
 - Faster R-CNN
+- Mask R-CNN
 - R-FCN (Fully-Convolutional Network)
 - SSPNet (Spatial pyramid pooling)
-- Mask R-CNN (This is optional one as it is for advanced segmentation)
-- Light-head RCNN
+
+
+- Light-head RCNN (recent paper)
+- RefineNet (recent paper)
+
+## Training Issue
+
+Based on recently published paper [**_Focal Loss for Dense Object Detection_**](https://arxiv.org/abs/1708.02002). The training strategy should be considered if we need a better performance. 
+
+For loss function, the study of some typical loss in object detection needs study
+
+- L1 loss
+- L2 loss
 
 # Record of Study, Experiment and Observation
 
@@ -92,7 +106,7 @@ Even though, as previously mentioned, this project mainly study and implement SS
 
 
 
-# Web Source for Reference
+# Notes and References
 
 - [Zhihu - Why is SSD weak in small object detection?](https://www.zhihu.com/question/49455386)
 - [Zhihu - What improvements does SSD method have?](https://www.zhihu.com/question/50910763)
@@ -102,3 +116,4 @@ Even though, as previously mentioned, this project mainly study and implement SS
 - [YOLO Project](https://pjreddie.com/darknet/yolo/)
 - [RoI Pooling Explanation](https://blog.deepsense.ai/region-of-interest-pooling-explained/)
 - [List of Datasets](https://en.wikipedia.org/wiki/List_of_datasets_for_machine_learning_research)
+- [Understanding Residual](https://stats.stackexchange.com/questions/56950/neural-network-with-skip-layer-connections)
