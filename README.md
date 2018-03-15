@@ -13,7 +13,7 @@ This part essentially record the cues of my study on this project. There will be
 Most methodologies used for object detection has a network to **_extract features_** of different level and then recognition. Such a recognition can be regarded as a sub-task for object detection since we need to know the existence of objects before we locate them (or in other word label them with bounding boxes). Convolutional Neural Networks (CNN) has proved their conspicuous performance in recognition tasks on images. In current stage of my study, I make some notes on following network architectures:
 
 - VGG
-- [ResNet](Papers and Notes/Residual Learning.md)
+- [ResNet](https://arxiv.org/abs/1512.03385)
 - [MobileNet](https://arxiv.org/pdf/1704.04861.pdf)
 - [MobileNet V2](https://arxiv.org/pdf/1801.04381.pdf)
 - Xception
@@ -108,11 +108,10 @@ For loss function, the study of some typical loss in object detection needs stud
 
 # Notes and References
 
-- [Zhihu - Why is SSD weak in small object detection?](https://www.zhihu.com/question/49455386)
-- [Zhihu - What improvements does SSD method have?](https://www.zhihu.com/question/50910763)
-- [Zhihu-SSD](https://zhuanlan.zhihu.com/p/24954433)
-- [Zhihu-What does SSD train?](https://zhuanlan.zhihu.com/p/29410169)
-- [Paper-Reading: SSD](http://blog.csdn.net/u010167269/article/details/52563573)
+- [SSD](https://github.com/MAGI003769/2017-18-FYP-Object-Detection/blob/master/Notes/SSD.md)
+- [Residual Learning](https://github.com/MAGI003769/2017-18-FYP-Object-Detection/blob/master/Notes/Residual%20Learning.md)
+- [Focal Loss](https://github.com/MAGI003769/2017-18-FYP-Object-Detection/blob/master/Notes/Focal-Loss.md)
+- [MobileNet](https://github.com/MAGI003769/2017-18-FYP-Object-Detection/blob/master/Notes/MbileNet-v2.md)
 - [YOLO Project](https://pjreddie.com/darknet/yolo/)
 - [RoI Pooling Explanation](https://blog.deepsense.ai/region-of-interest-pooling-explained/)
 - [List of Datasets](https://en.wikipedia.org/wiki/List_of_datasets_for_machine_learning_research)
