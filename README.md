@@ -1,8 +1,8 @@
 # 2017-18-FYP-Object-Detection
 
-My undergraduate final year project, supervised by [Dr. Qiufeng Wang](http://www.xjtlu.edu.cn/zh/departments/academic-departments/electrical-and-electronic-engineering/staff/qiufeng-wang), which intends to implement object detection in images using SSD method. This repository, whose `README.md` is a record of learning outcome and experiment observation, contains the paper, implementation code and relevant data. 
+My undergraduate final year project, supervised by [Dr. Qiufeng Wang](http://www.xjtlu.edu.cn/zh/departments/academic-departments/electrical-and-electronic-engineering/staff/qiufeng-wang), which intends to implement object detection in images using SSD method. This `README.md` is a record of learning outcome and experiment observation, contains the paper, implementation code and relevant data. 
 
-The detail theory refers to the [paper](https://arxiv.org/abs/1512.02325). Initially, I read and understand the methodology in paper with a [keras version](https://github.com/rykov8/ssd_keras) implementation. Considering about current stage that I still a tyro in this field, it is most likely to make modifications on such a version based on user-friendly interface. For better performance, it may be better to refer a [tensorflow version](https://github.com/balancap/SSD-Tensorflow) with more advanced features. With the study goes further, more methodologies and techniques come into view. 
+The detail theory refers to the [SSD paper](https://arxiv.org/abs/1512.02325). Initially, I read and understand the methodology in paper with a [keras version](https://github.com/rykov8/ssd_keras) implementation. Considering about current stage that I still a tyro in this field, it is most likely to make modifications on such a version based on user-friendly interface. For better performance, it may be better to refer a [tensorflow version](https://github.com/balancap/SSD-Tensorflow) with more advanced features. With the study goes further, more methodologies and techniques come into view. 
 
 # Comprehension of Methodology
 
@@ -93,6 +93,7 @@ For loss function, the study of some typical loss in object detection needs stud
 **2017/11/26**
 
 - **_Question:_** Regression detail of bounding box position
+- ​
 
 **2017/12/2**
 
@@ -116,3 +117,7 @@ For loss function, the study of some typical loss in object detection needs stud
 - [RoI Pooling Explanation](https://blog.deepsense.ai/region-of-interest-pooling-explained/)
 - [List of Datasets](https://en.wikipedia.org/wiki/List_of_datasets_for_machine_learning_research)
 - [Understanding Residual](https://stats.stackexchange.com/questions/56950/neural-network-with-skip-layer-connections)
+- [Google Research Blog: TensorFlow Object Detection API](https://research.googleblog.com/2017/06/supercharge-your-computer-vision-models.html)
+- [使用SSD-MobileNet训练模型](http://wossoneri.github.io/2017/12/12/[Tensorflow]Train-model-with-SSD-MobileNet/)
+- [mAP-implementation-1](https://github.com/benhamner/Metrics/blob/master/Python/ml_metrics/average_precision.py)
+- [mAP-implmentation-2](https://github.com/broadinstitute/keras-rcnn/issues/6)

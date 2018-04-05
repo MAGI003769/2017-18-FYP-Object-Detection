@@ -1,5 +1,5 @@
 """ 
-Implementation of MobileNet v2
+Try to use MobileNet v2 as feature extractor of SSD
 
 A Keras implementaiton
 
@@ -27,13 +27,13 @@ from keras.models import Model
 from keras.layers import add
 from keras.layers import Activation
 from keras.applications.mobilenet import relu6, DepthwiseConv2D
-#from keras.utils.vis_utils import plot_model
+#from keras.utils import plot_model
 
 #from ssd_layers import Normalize
 #from ssd_layers import PriorBox
 
 
-def MobileNet_v2(input_shape, num_classes=21):
+def MobileNetSSD(input_shape, num_classes=21):
     """MobileSSD300 architecture.
 
     # Arguments
@@ -436,18 +436,13 @@ def MobileNet_v2(input_shape, num_classes=21):
     ### Conv for prediction ###
     net['conv_preds'] = Conv2D(1000, (1,1), padding='same', name='conv_preds')(net['dropout'])
 
-    ### Softmax ###
-    net['softmax'] = Activation('softmax', name='softmax')(net['conv_preds'])
-    net['output'] = Reshape((1000, ))(net['softmax'])
 
-
-    model = Model(net['input'], net['output'])
+    model = Model(net['input'], net['conv_preds'])
 
     return model
 
 
 if __name__ == '__main__':
-    model = MobileNet_v2((224, 224, 3))
+    model = MobileNetSSD((224, 224, 3))
     model.summary()
-    #plot_model(model, to_file='model.png')
     # print(model.get_weights())
