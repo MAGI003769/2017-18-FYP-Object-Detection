@@ -2,7 +2,7 @@
 
 My undergraduate final year project, supervised by [Dr. Qiufeng Wang](http://www.xjtlu.edu.cn/zh/departments/academic-departments/electrical-and-electronic-engineering/staff/qiufeng-wang), which intends to implement object detection in images using SSD method. This `README.md` is a record of learning outcome and experiment observation, contains the paper, implementation code and relevant data. 
 
-The detail theory refers to the [SSD paper](https://arxiv.org/abs/1512.02325). Initially, I read and understand the methodology in paper with a [keras version](https://github.com/rykov8/ssd_keras) implementation. Considering about current stage that I still a tyro in this field, it is most likely to make modifications on such a version based on user-friendly interface. For better performance, it may be better to refer a [tensorflow version](https://github.com/balancap/SSD-Tensorflow) with more advanced features. With the study goes further, more methodologies and techniques come into view. 
+The detail theory refers to the [SSD paper](https://arxiv.org/abs/1512.02325). Initially, I read and understand the methodology in paper with a [keras version](https://github.com/pierluigiferrari/ssd_keras) implementation. Considering about current stage that I still a tyro in this field, it is most likely to make modifications on such a version based on user-friendly interface. For better performance, it may be better to refer a [tensorflow version](https://github.com/balancap/SSD-Tensorflow) with more advanced features. With the study goes further, more methodologies and techniques come into view. 
 
 # Comprehension of Methodology
 
@@ -16,32 +16,32 @@ Most methodologies used for object detection has a network to **_extract feature
 - [ResNet](https://arxiv.org/abs/1512.03385)
 - [MobileNet](https://arxiv.org/pdf/1704.04861.pdf)
 - [MobileNet V2](https://arxiv.org/pdf/1801.04381.pdf)
-- Xception
 
 ## Region Related
 
 This project employs **_Bounding Boxes_** to show the results of object detection rather than **_segmentation_** which is a much more advanced task. 
 
-- Region of Interest (RoI)
-
-
-- Region Proposal Network (RPN)
 - **Anchor**
+- Region of Interest (RoI)
+- Region Proposal Network (RPN)
+
+
+
 
 ## Integrated Detection Methodologies
 
-Even though, as previously mentioned, this project mainly study and implement SSD for object detection. It is improper to ignore the methodologies which perform well in this task. Following list collects some remarkable methodologies.
+Even though, as previously mentioned, this project mainly study and implement SSD for object detection. It is improper to ignore the methodologies which perform well in this task. Following list collects some remarkable methodologies. ()
 
 - **[SSD](https://arxiv.org/abs/1512.02325) / SSDLite (mentioned in MobileNet V2 paper)**
-- YOLO (YOLO9000)
+- YOLO / YOLOv2 / YOLOv3*
 - Faster R-CNN
 - Mask R-CNN
 - R-FCN (Fully-Convolutional Network)
 - SSPNet (Spatial pyramid pooling)
 
 
-- Light-head RCNN (recent paper)
-- RefineNet (recent paper)
+- Light-head RCNN*
+- RefineNet*
 
 ## Training Issue
 
@@ -51,6 +51,10 @@ For loss function, the study of some typical loss in object detection needs stud
 
 - L1 loss
 - L2 loss
+- softmax
+- **focal loss**
+
+
 
 # Record of Study, Experiment and Observation
 
@@ -93,7 +97,6 @@ For loss function, the study of some typical loss in object detection needs stud
 **2017/11/26**
 
 - **_Question:_** Regression detail of bounding box position
-- ​
 
 **2017/12/2**
 
